@@ -9,7 +9,9 @@ import VolunteerPopup from "../components/site/VolunteerPopup";
 import SectionEyebrow from "../components/site/SectionEyebrow";
 
 import heroAsset from "@/assets/hero.gif.asset.json";
+import heroVideoAsset from "@/assets/hero.mp4.asset.json";
 const IMG_HERO = heroAsset.url;
+const VIDEO_HERO = heroVideoAsset.url;
 const IMG_ABOUT =
   "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80";
 const IMG_SERVICES =
@@ -79,10 +81,13 @@ function Home() {
           className="relative w-full"
           style={{ aspectRatio: "1920 / 804" }}
         >
-          <img
-            alt=""
+          <video
             className="absolute inset-0 w-full h-full object-cover"
-            src={IMG_HERO}
+            src={VIDEO_HERO}
+            autoPlay
+            loop
+            muted
+            playsInline
           />
           <div className="absolute inset-0 bg-black/30" />
         </div>
