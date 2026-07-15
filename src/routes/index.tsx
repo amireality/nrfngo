@@ -84,9 +84,9 @@ function Home() {
           src={IMG_HERO}
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
         <div className="relative z-10 w-full px-5 md:px-[110px] pb-4 md:pb-8">
-          <div className="flex flex-col sm:flex-row flex-wrap items-end sm:items-center justify-end sm:justify-start gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4">
             <Link
               to="/donation"
               className="bg-brand hover:bg-brand-dark transition-colors px-4 py-2 md:px-8 md:py-4 rounded-[4px] text-brand-foreground text-sm md:text-base font-medium"
