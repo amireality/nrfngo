@@ -8,10 +8,10 @@ import SectionEyebrow from "../components/site/SectionEyebrow";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact us — largerthani" },
-      { name: "description", content: "Get in touch with the largerthani team. Two offices in Nigeria, one team." },
-      { property: "og:title", content: "Contact us — largerthani" },
-      { property: "og:description", content: "Get in touch with the largerthani team." },
+      { title: "Contact us — Northrop Research Foundation" },
+      { name: "description", content: "Get in touch with the Northrop Research Foundation team. Two offices in India, one team." },
+      { property: "og:title", content: "Contact us — Northrop Research Foundation" },
+      { property: "og:description", content: "Get in touch with the Northrop Research Foundation team." },
     ],
   }),
   component: Contact,
@@ -39,16 +39,16 @@ function Contact() {
           <p className="font-bold text-[22px]">Let's talk!</p>
           <p className="text-[16px] leading-[28px] mt-[12px]">
             +234 090 1234 6514<br />
-            <a href="mailto:hello@largerthani.org" className="hover:text-brand-dark">
-              hello@largerthani.org
+            <a href="mailto:hello@Northrop Research Foundation.org" className="hover:text-brand-dark">
+              hello@Northrop Research Foundation.org
             </a>
           </p>
           <hr className="my-[24px] border-hairline" />
           <p className="font-bold text-[18px]">Head office</p>
-          <p className="text-ink-muted text-[15px] leading-[1.6]">8 Brewery Drive, Lagos, Nigeria.</p>
+          <p className="text-ink-muted text-[15px] leading-[1.6]">1st Cross, Bandra West, Mumbai, India.</p>
           <p className="font-bold text-[18px] mt-[20px]">Branch office</p>
           <p className="text-ink-muted text-[15px] leading-[1.6]">
-            Opp Opolo round-about, Yenagoa, Bayelsa, Nigeria
+            Near FC Road, Pune, Maharashtra, India
           </p>
           <div className="flex gap-[16px] mt-[24px] text-ink-muted">
             <a href="#" aria-label="Facebook"><Facebook className="size-5" /></a>

@@ -16,11 +16,9 @@ export default function Navbar({ variant = "default" }: { variant?: "default" | 
     <nav
       className={`${bg} backdrop-blur-md border-b border-black/10 sticky top-0 z-50 flex items-center justify-between px-6 md:px-[110px] py-[18px]`}
     >
-      <Link to="/" className="flex items-baseline">
-        <span className="font-bold text-[24px] text-ink">largerthan</span>
-        <span className="font-script text-[25px] text-ink" style={{ marginLeft: -4 }}>
-          i
-        </span>
+      <Link to="/" className="flex items-baseline gap-1">
+        <span className="font-bold text-[20px] md:text-[22px] text-ink leading-none">Northrop Research</span>
+        <span className="font-script text-[22px] md:text-[24px] text-brand-dark leading-none">Foundation</span>
       </Link>
 
       <div className="hidden md:flex gap-[40px] text-[16px] font-medium">

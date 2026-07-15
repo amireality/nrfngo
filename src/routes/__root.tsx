@@ -72,9 +72,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const SITE_TITLE = "largerthani — Inclusive care for children with special needs";
+const SITE_TITLE = "Northrop Research Foundation — Inclusive care for children with special needs";
 const SITE_DESC =
-  "largerthani is a community-run NGO providing family support, therapy, education and health care for children with special needs.";
+  "Northrop Research Foundation is a community-run NGO providing family support, therapy, education and health care for children with special needs.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({

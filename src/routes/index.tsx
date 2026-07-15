@@ -8,8 +8,8 @@ import CTASection from "../components/site/CTASection";
 import VolunteerPopup from "../components/site/VolunteerPopup";
 import SectionEyebrow from "../components/site/SectionEyebrow";
 
-const IMG_HERO =
-  "https://images.unsplash.com/photo-1587691592099-24045742c181?auto=format&fit=crop&w=1800&q=80";
+import heroAsset from "@/assets/hero.gif.asset.json";
+const IMG_HERO = heroAsset.url;
 const IMG_ABOUT =
   "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80";
 const IMG_SERVICES =
@@ -42,14 +42,14 @@ const DONATION_SPLIT = [
   { pct: 5, label: "feeding the poor", color: "#f38fbf" },
 ];
 
-const SUPPORTERS = ["UNICEF", "Save the Children", "WHO", "Bayelsa Foundation", "Lagos Trust", "Ford Fdn"];
+const SUPPORTERS = ["UNICEF", "Save the Children", "WHO", "Maharashtra Foundation", "Mumbai Trust", "Ford Fdn"];
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "largerthani — Inclusive care for children with special needs" },
-      { name: "description", content: "A community-run NGO providing therapy, education and family support for children with special needs across Nigeria." },
-      { property: "og:title", content: "largerthani — Inclusive care for children with special needs" },
+      { title: "Northrop Research Foundation — Inclusive care for children with special needs" },
+      { name: "description", content: "A community-run NGO providing therapy, education and family support for children with special needs across India." },
+      { property: "og:title", content: "Northrop Research Foundation — Inclusive care for children with special needs" },
       { property: "og:description", content: "Family support, therapy, education and health care for children with special needs." },
       { property: "og:image", content: IMG_HERO },
       { name: "twitter:image", content: IMG_HERO },
@@ -74,18 +74,25 @@ function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[735px] flex flex-col justify-between">
-        <img alt="" className="absolute inset-0 object-cover size-full" src={IMG_HERO} />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 px-6 md:px-[110px] pt-[140px] md:pt-[195px] max-w-[720px]">
-          <h1 className="font-bold text-[40px] md:text-[64px] leading-[1.15] text-white">
-            Inclusive care for children with special needs
-          </h1>
-          <div className="flex flex-wrap items-center gap-[16px] mt-[48px]">
-            <button className="bg-brand hover:bg-brand-dark transition-colors flex items-center gap-[8px] px-[20px] py-[12px] rounded-[4px] text-brand-foreground text-[16px] font-medium">
+      <section
+        className="relative w-full flex items-end"
+        style={{ aspectRatio: "1920 / 804" }}
+      >
+        <img
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          src={IMG_HERO}
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 px-6 md:px-[110px] pb-[80px] md:pb-[120px]">
+          <div className="flex flex-wrap items-center gap-[16px]">
+            <Link
+              to="/donation"
+              className="bg-brand hover:bg-brand-dark transition-colors flex items-center gap-[8px] px-[32px] py-[16px] rounded-[4px] text-brand-foreground text-[16px] font-medium"
+            >
               <Play className="size-5" fill="currentColor" />
-              Play Video
-            </button>
+              Donate
+            </Link>
             <Link
               to="/what-we-do"
               className="backdrop-blur-md bg-white/95 hover:bg-white transition-colors px-[32px] py-[16px] rounded-[4px] text-[color:var(--ink-soft)] text-[16px] font-medium"
@@ -93,10 +100,6 @@ function Home() {
               What we do
             </Link>
           </div>
-        </div>
-        <div className="relative z-10 px-6 md:px-[110px] pb-[24px] pt-16 flex flex-wrap justify-between gap-4 text-white text-[16px] md:text-[18px] font-medium border-t border-white/40">
-          <p>230 children under our care</p>
-          <p>58 donations collected this month</p>
         </div>
       </section>
 
@@ -108,7 +111,7 @@ function Home() {
             We provide a place for children with special needs
           </h2>
           <p className="text-ink-muted text-[16px] leading-[1.7] mt-[24px] whitespace-pre-line">
-            {`largerthani started in 2016 as a weekend visit programme to a single orphanage in Bayelsa. Six years on, we run therapy centres, scholarship programmes and family support groups across three states.
+            {`Northrop Research Foundation started in 2016 as a weekend visit programme to a single orphanage in Maharashtra. Six years on, we run therapy centres, scholarship programmes and family support groups across three states.
 
 Every child under our care has a personalised plan built by therapists, teachers and — most importantly — the family. We are honest with our numbers and open about how your donations are spent.`}
           </p>

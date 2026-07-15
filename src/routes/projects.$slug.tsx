@@ -29,7 +29,7 @@ const PROJECTS: Record<string, Project> = {
     title: "Mission Smile 1K: Outdoor charity outreach",
     hero: IMG_1,
     intro:
-      "A twelve-village outreach across Bayelsa and Delta states designed to reach children who have never had access to specialist care.",
+      "A twelve-village outreach across Maharashtra and Gujarat states designed to reach children who have never had access to specialist care.",
     stats: [
       { Icon: Users, value: "1,240", label: "People served" },
       { Icon: Calendar, value: "20+", label: "Orphanage visits in 2 months" },
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/projects/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Project not found — largerthani" },
+          { title: "Project not found — Northrop Research Foundation" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -83,9 +83,9 @@ export const Route = createFileRoute("/projects/$slug")({
     const { project } = loaderData;
     return {
       meta: [
-        { title: `${project.title} — largerthani` },
+        { title: `${project.title} — Northrop Research Foundation` },
         { name: "description", content: project.intro },
-        { property: "og:title", content: `${project.title} — largerthani` },
+        { property: "og:title", content: `${project.title} — Northrop Research Foundation` },
         { property: "og:description", content: project.intro },
         { property: "og:image", content: project.hero },
       ],
