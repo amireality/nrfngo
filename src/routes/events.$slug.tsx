@@ -26,7 +26,7 @@ const EVENTS: Record<string, Event> = {
     hero: IMG_1,
     date: "13 apr",
     when: "April 13, 2026 — 8:30 AM",
-    where: "Opp. Opolo round-about, Pune, Maharashtra, India",
+    where: "Near FC Road, Pune, Maharashtra, India",
     intro:
       "An open-house day for families, volunteers and supporters. Meet the children, tour the centre, and see the therapy programme up close.",
   },
@@ -36,7 +36,7 @@ const EVENTS: Record<string, Event> = {
     hero: IMG_2,
     date: "25 apr",
     when: "April 25, 2026 — 10:00 AM",
-    where: "Northrop Research Foundation Head Office, 8 Brewery Drive, Mumbai",
+    where: "Northrop Research Foundation Head Office, 1st Cross, Bandra West, Mumbai",
     intro:
       "A working session for parents, teachers and caregivers, led by Dr. Tunde Bello and our therapy team. Free to attend, registration required.",
   },
