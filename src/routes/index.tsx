@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
       { title: "Northrop Research Foundation — Inclusive care for children with special needs" },
       { name: "description", content: "A community-run NGO providing therapy, education and family support for children with special needs across India." },
       { property: "og:title", content: "Northrop Research Foundation — Inclusive care for children with special needs" },
-      { property: "og:description", content: "Family support, therapy, education and health care for children with special needs." },
+      { property: "og:description", content: "A community-run NGO providing therapy, education and family support for children with special needs across India." },
       { property: "og:image", content: IMG_HERO },
       { name: "twitter:image", content: IMG_HERO },
     ],
