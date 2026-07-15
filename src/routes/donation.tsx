@@ -26,9 +26,9 @@ const AMOUNTS = [1000, 5000, 15000, 50000];
 export const Route = createFileRoute("/donation")({
   head: () => ({
     meta: [
-      { title: "Donate — largerthani" },
+      { title: "Donate — Northrop Research Foundation" },
       { name: "description", content: "Support therapy, education and family care for children with special needs. Every naira reaches a child." },
-      { property: "og:title", content: "Donate — largerthani" },
+      { property: "og:title", content: "Donate — Northrop Research Foundation" },
       { property: "og:description", content: "92% of every naira reaches a child. Donate today." },
       { property: "og:image", content: IMG_HERO },
     ],

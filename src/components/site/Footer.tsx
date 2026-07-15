@@ -90,7 +90,7 @@ export default function Footer() {
       </div>
 
       <p className="mt-[64px] text-[13px] opacity-60">
-        © {new Date().getFullYear()} largerthani. All rights reserved.
+        © {new Date().getFullYear()} Northrop Research Foundation. All rights reserved.
       </p>
     </footer>
   );

@@ -37,9 +37,9 @@ const AWARDS = [
 export const Route = createFileRoute("/about-us")({
   head: () => ({
     meta: [
-      { title: "About us — largerthani" },
-      { name: "description", content: "Meet the team behind largerthani — a Bayelsa-founded NGO for children with special needs." },
-      { property: "og:title", content: "About us — largerthani" },
+      { title: "About us — Northrop Research Foundation" },
+      { name: "description", content: "Meet the team behind Northrop Research Foundation — a Bayelsa-founded NGO for children with special needs." },
+      { property: "og:title", content: "About us — Northrop Research Foundation" },
       { property: "og:description", content: "The people, mission and story behind our care programmes." },
       { property: "og:image", content: IMG_FOUNDER },
     ],
@@ -62,7 +62,7 @@ function AboutUs() {
           </h1>
         </div>
         <p className="max-w-[480px] text-ink-muted text-[16px] leading-[1.7]">
-          largerthani was founded in 2016 in Bayelsa, Nigeria. What started as a weekend visit
+          Northrop Research Foundation was founded in 2016 in Bayelsa, Nigeria. What started as a weekend visit
           programme has grown into three therapy centres and a network of 200+ volunteers,
           supporting more than 230 children every day.
         </p>
@@ -140,7 +140,7 @@ function AboutUs() {
             make sure the world catches up."
           </blockquote>
           <p className="text-ink-muted text-[16px] leading-[1.7] mt-[24px]">
-            I started largerthani after my nephew Chidi was diagnosed with autism at four. What I
+            I started Northrop Research Foundation after my nephew Chidi was diagnosed with autism at four. What I
             saw wasn't a lack of love — it was a lack of infrastructure. Six years on, we've built
             some of that infrastructure. There's more to build.
           </p>

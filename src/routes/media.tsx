@@ -29,9 +29,9 @@ const MORE = [
 export const Route = createFileRoute("/media")({
   head: () => ({
     meta: [
-      { title: "Media — largerthani" },
-      { name: "description", content: "News, notes and stories from the largerthani community." },
-      { property: "og:title", content: "Media — largerthani" },
+      { title: "Media — Northrop Research Foundation" },
+      { name: "description", content: "News, notes and stories from the Northrop Research Foundation community." },
+      { property: "og:title", content: "Media — Northrop Research Foundation" },
       { property: "og:description", content: "News and stories from our care programmes." },
       { property: "og:image", content: IMG_3 },
     ],

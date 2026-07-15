@@ -35,9 +35,9 @@ const PROJECTS = [
 export const Route = createFileRoute("/what-we-do")({
   head: () => ({
     meta: [
-      { title: "What we do — largerthani" },
+      { title: "What we do — Northrop Research Foundation" },
       { name: "description", content: "Family support, therapy, education, health and outreach — the six pillars of our work." },
-      { property: "og:title", content: "What we do — largerthani" },
+      { property: "og:title", content: "What we do — Northrop Research Foundation" },
       { property: "og:description", content: "The six pillars of our work with children with special needs." },
       { property: "og:image", content: IMG_HERO },
     ],

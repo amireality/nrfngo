@@ -111,7 +111,7 @@ function Home() {
             We provide a place for children with special needs
           </h2>
           <p className="text-ink-muted text-[16px] leading-[1.7] mt-[24px] whitespace-pre-line">
-            {`largerthani started in 2016 as a weekend visit programme to a single orphanage in Bayelsa. Six years on, we run therapy centres, scholarship programmes and family support groups across three states.
+            {`Northrop Research Foundation started in 2016 as a weekend visit programme to a single orphanage in Bayelsa. Six years on, we run therapy centres, scholarship programmes and family support groups across three states.
 
 Every child under our care has a personalised plan built by therapists, teachers and — most importantly — the family. We are honest with our numbers and open about how your donations are spent.`}
           </p>
