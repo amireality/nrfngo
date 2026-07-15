@@ -16,7 +16,7 @@ const TAB_COPY: Record<Tab, string> = {
   Overview:
     "Your donation goes directly into programme delivery. 92% of every naira reaches a child — through therapy sessions, tuition, meals and medical care. We publish an audited breakdown every quarter.",
   Impact:
-    "In 2022, contributions from 1,200 donors helped us onboard 74 new children, run 3,000 therapy sessions and open a second centre in Yenagoa. Every donor gets a personalised impact report.",
+    "In 2022, contributions from 1,200 donors helped us onboard 74 new children, run 3,000 therapy sessions and open a second centre in Pune. Every donor gets a personalised impact report.",
   "What you get":
     "Beyond the annual report, monthly donors receive quarterly video updates from the children (with parental consent), an invitation to our annual family day, and a tax deduction receipt.",
 };

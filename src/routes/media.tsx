@@ -15,8 +15,8 @@ const IMG_3 =
   "https://images.unsplash.com/photo-1587691592099-24045742c181?auto=format&fit=crop&w=800&q=80";
 
 const SIDE_POSTS = [
-  { image: IMG_1, title: "Autism care day", date: "15th Nov 2022", excerpt: "How we ran the largest single-day autism family clinic in Bayelsa." },
-  { image: IMG_2, title: "Down syndrome outreach", date: "8th Oct 2022", excerpt: "Partnering with Lagos General Hospital to reach 120 families in one weekend." },
+  { image: IMG_1, title: "Autism care day", date: "15th Nov 2022", excerpt: "How we ran the largest single-day autism family clinic in Maharashtra." },
+  { image: IMG_2, title: "Down syndrome outreach", date: "8th Oct 2022", excerpt: "Partnering with Mumbai General Hospital to reach 120 families in one weekend." },
   { image: IMG_3, title: "Caring for children with cerebral palsy", date: "22nd Sep 2022", excerpt: "Notes from our therapy team on progress-based care plans." },
 ];
 
