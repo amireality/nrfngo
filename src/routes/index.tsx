@@ -84,13 +84,12 @@ function Home() {
           src={IMG_HERO}
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 px-6 md:px-[110px] pb-[80px] md:pb-[120px]">
+        <div className="relative z-10 px-6 md:px-[110px] pb-[32px] md:pb-[40px]">
           <div className="flex flex-wrap items-center gap-[16px]">
             <Link
               to="/donation"
-              className="bg-brand hover:bg-brand-dark transition-colors flex items-center gap-[8px] px-[32px] py-[16px] rounded-[4px] text-brand-foreground text-[16px] font-medium"
+              className="bg-brand hover:bg-brand-dark transition-colors px-[32px] py-[16px] rounded-[4px] text-brand-foreground text-[16px] font-medium"
             >
-              <Play className="size-5" fill="currentColor" />
               Donate
             </Link>
             <Link
