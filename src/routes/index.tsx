@@ -84,17 +84,18 @@ function Home() {
           src={IMG_HERO}
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 px-6 md:px-[110px] pb-[32px] md:pb-[40px]">
-          <div className="flex flex-wrap items-center gap-[16px]">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="relative z-10 w-full px-5 md:px-[110px] pb-5 md:pb-10">
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4">
             <Link
               to="/donation"
-              className="bg-brand hover:bg-brand-dark transition-colors px-[32px] py-[16px] rounded-[4px] text-brand-foreground text-[16px] font-medium"
+              className="bg-brand hover:bg-brand-dark transition-colors px-5 py-2.5 md:px-8 md:py-4 rounded-[4px] text-brand-foreground text-sm md:text-base font-medium"
             >
               Donate
             </Link>
             <Link
               to="/what-we-do"
-              className="backdrop-blur-md bg-white/95 hover:bg-white transition-colors px-[32px] py-[16px] rounded-[4px] text-[color:var(--ink-soft)] text-[16px] font-medium"
+              className="backdrop-blur-md bg-white/95 hover:bg-white transition-colors px-5 py-2.5 md:px-8 md:py-4 rounded-[4px] text-ink-soft text-sm md:text-base font-medium"
             >
               What we do
             </Link>
