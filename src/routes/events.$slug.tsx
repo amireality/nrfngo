@@ -26,7 +26,7 @@ const EVENTS: Record<string, Event> = {
     hero: IMG_1,
     date: "13 apr",
     when: "April 13, 2026 — 8:30 AM",
-    where: "Opp. Opolo round-about, Yenagoa, Bayelsa, Nigeria",
+    where: "Opp. Opolo round-about, Pune, Maharashtra, India",
     intro:
       "An open-house day for families, volunteers and supporters. Meet the children, tour the centre, and see the therapy programme up close.",
   },
@@ -36,7 +36,7 @@ const EVENTS: Record<string, Event> = {
     hero: IMG_2,
     date: "25 apr",
     when: "April 25, 2026 — 10:00 AM",
-    where: "largerthani Head Office, 8 Brewery Drive, Lagos",
+    where: "Northrop Research Foundation Head Office, 8 Brewery Drive, Mumbai",
     intro:
       "A working session for parents, teachers and caregivers, led by Dr. Tunde Bello and our therapy team. Free to attend, registration required.",
   },
@@ -50,14 +50,14 @@ export const Route = createFileRoute("/events/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Event not found — largerthani" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Event not found — Northrop Research Foundation" }, { name: "robots", content: "noindex" }] };
     }
     const { event } = loaderData;
     return {
       meta: [
-        { title: `${event.title} — largerthani` },
+        { title: `${event.title} — Northrop Research Foundation` },
         { name: "description", content: event.intro },
-        { property: "og:title", content: `${event.title} — largerthani` },
+        { property: "og:title", content: `${event.title} — Northrop Research Foundation` },
         { property: "og:description", content: event.intro },
         { property: "og:image", content: event.hero },
       ],
