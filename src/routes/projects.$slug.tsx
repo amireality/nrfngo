@@ -14,12 +14,13 @@ const IMG_2 =
 const IMG_3 =
   "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=80";
 
+type Stat = { label: string; value: string; Icon: typeof Users };
 type Project = {
   slug: string;
   title: string;
   hero: string;
   intro: string;
-  stats: { label: string; value: string; Icon: typeof Users }[];
+  stats: Stat[];
 };
 
 const PROJECTS: Record<string, Project> = {
