@@ -81,10 +81,13 @@ function Home() {
           className="relative w-full"
           style={{ aspectRatio: "1920 / 804" }}
         >
-          <img
-            alt=""
+          <video
             className="absolute inset-0 w-full h-full object-cover"
-            src={IMG_HERO}
+            src={VIDEO_HERO}
+            autoPlay
+            loop
+            muted
+            playsInline
           />
           <div className="absolute inset-0 bg-black/30" />
         </div>
