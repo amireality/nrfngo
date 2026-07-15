@@ -34,9 +34,9 @@ export default function Footer() {
   return (
     <footer className="bg-[color:var(--ink)] text-white px-6 md:px-[110px] py-[96px]">
       <div className="flex flex-col lg:flex-row justify-between gap-[64px]">
-        <Link to="/" className="flex items-baseline gap-1 shrink-0">
-          <span className="font-bold text-[22px]">Northrop Research</span>
-          <span className="font-script text-[24px] text-brand-light">Foundation</span>
+        <Link to="/" className="flex flex-col leading-none shrink-0">
+          <span className="font-bold text-[20px] tracking-tight">Northrop Research</span>
+          <span className="font-script text-[24px] text-brand-light -mt-1 self-end">Foundation</span>
         </Link>
 
         <div className="flex flex-wrap gap-[64px]">
