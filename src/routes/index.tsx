@@ -84,7 +84,13 @@ function Home() {
           src={IMG_HERO}
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 25%, rgba(0,0,0,0.5) 55%, transparent 80%)",
+          }}
+        />
         <div className="relative z-10 w-full px-5 md:px-[110px] pb-4 md:pb-8">
           <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4">
             <Link
