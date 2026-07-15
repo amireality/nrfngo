@@ -74,27 +74,29 @@ function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section
-        className="relative w-full flex items-end"
-        style={{ aspectRatio: "1920 / 804" }}
-      >
-        <img
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          src={IMG_HERO}
-        />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 px-6 md:px-[110px] pb-[32px] md:pb-[40px]">
-          <div className="flex flex-wrap items-center gap-[16px]">
+      <section className="relative w-full">
+        <div
+          className="relative w-full"
+          style={{ aspectRatio: "1920 / 804" }}
+        >
+          <img
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            src={IMG_HERO}
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        <div className="bg-[color:var(--ink)] px-5 md:px-[110px] py-4 md:py-5">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
             <Link
               to="/donation"
-              className="bg-brand hover:bg-brand-dark transition-colors px-[32px] py-[16px] rounded-[4px] text-brand-foreground text-[16px] font-medium"
+              className="bg-brand hover:bg-brand-dark transition-colors px-5 py-3 md:px-8 md:py-4 rounded-[4px] text-brand-foreground text-sm md:text-base font-medium text-center"
             >
               Donate
             </Link>
             <Link
               to="/what-we-do"
-              className="backdrop-blur-md bg-white/95 hover:bg-white transition-colors px-[32px] py-[16px] rounded-[4px] text-[color:var(--ink-soft)] text-[16px] font-medium"
+              className="bg-white/95 hover:bg-white transition-colors px-5 py-3 md:px-8 md:py-4 rounded-[4px] text-ink-soft text-sm md:text-base font-medium text-center"
             >
               What we do
             </Link>
