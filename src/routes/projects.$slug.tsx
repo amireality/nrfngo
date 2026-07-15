@@ -154,7 +154,7 @@ function ProjectPage() {
       {/* Stats */}
       <section className="bg-brand-light px-6 md:px-[110px] py-[80px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[64px] gap-y-[40px] max-w-[900px] mx-auto">
-          {project.stats.map(({ Icon, value, label }) => (
+          {project.stats.map(({ Icon, value, label }: Stat) => (
             <div key={label} className="flex gap-[20px] items-start">
               <Icon className="size-8 text-brand-dark shrink-0 mt-1" strokeWidth={1.75} />
               <div>
