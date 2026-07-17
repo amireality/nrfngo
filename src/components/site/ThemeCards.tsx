@@ -7,6 +7,17 @@ import React, { useEffect, useRef, useState } from "react";
 import themeEducationAsset from "@/assets/theme_education_1784287021947.png";
 import themeHealthcareAsset from "@/assets/theme_healthcare_1784287032350.png";
 import themeCommunityAsset from "@/assets/theme_community_1784287069145.png";
+import projectSmileAsset from "@/assets/project_smile_1784287111245.png";
+import projectExcursionAsset from "@/assets/project_excursion_1784287121692.png";
+
+const PaintBackground = () => (
+  <div className="absolute inset-0 z-0 overflow-hidden bg-[#e8ece1]">
+    <div className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#8f9f6e] mix-blend-multiply blur-[80px] md:blur-[120px] opacity-80 animate-blob" />
+    <div className="absolute top-[20%] -right-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#556b2f] mix-blend-multiply blur-[80px] md:blur-[120px] opacity-80 animate-blob animation-delay-2000" />
+    <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-[100%] bg-[#3a4b1f] mix-blend-multiply blur-[80px] md:blur-[120px] opacity-80 animate-blob animation-delay-4000" />
+    <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px]" />
+  </div>
+);
 
 type Card = {
   title: string;
@@ -45,29 +56,43 @@ const defaultSpring: SpringConfig = {
 export const ThemeCards = ({
   spring = defaultSpring,
   activeScale = 1.15,
-  cardSpacing = 180,
+  cardSpacing = 160,
 }: CardsProps = {}) => {
   const cards: Card[] = [
     {
       title: "Education",
       description: "Tuition, materials and personalized learning plans for every child.",
-      skeleton: <img src={themeEducationAsset} className="h-40 md:h-50 w-full rounded-xl object-cover" />,
-      className: "bg-[#8f9f6e] [&_h2]:text-white",
-      config: { y: -20, rotate: -10, zIndex: 2 },
+      skeleton: <img src={themeEducationAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
+      className: "bg-[#8f9f6e] text-white",
+      config: { y: -20, rotate: -12, zIndex: 2 },
     },
     {
       title: "Healthcare",
       description: "Therapy, regular check-ups, and coverage for critical treatments.",
-      skeleton: <img src={themeHealthcareAsset} className="h-40 md:h-50 w-full rounded-xl object-cover" />,
-      className: "bg-[#556b2f] [&_p]:text-white [&_h2]:text-white",
-      config: { y: 20, rotate: 5, zIndex: 3 },
+      skeleton: <img src={themeHealthcareAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
+      className: "bg-[#556b2f] text-white",
+      config: { y: 20, rotate: -4, zIndex: 3 },
     },
     {
       title: "Community",
       description: "Building strong support networks for families walking this journey together.",
-      skeleton: <img src={themeCommunityAsset} className="h-40 md:h-50 w-full rounded-xl object-cover" />,
-      className: "bg-[#3a4b1f] [&_h2]:text-white",
-      config: { y: -40, rotate: -5, zIndex: 4 },
+      skeleton: <img src={themeCommunityAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
+      className: "bg-[#3a4b1f] text-white",
+      config: { y: -30, rotate: 6, zIndex: 4 },
+    },
+    {
+      title: "Empowerment",
+      description: "Providing resources and skills for sustainable livelihoods.",
+      skeleton: <img src={projectSmileAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
+      className: "bg-[#a3946a] text-white",
+      config: { y: 15, rotate: 14, zIndex: 5 },
+    },
+    {
+      title: "Environment",
+      description: "Fostering awareness and care for our natural surroundings.",
+      skeleton: <img src={projectExcursionAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
+      className: "bg-[#2c3d1b] text-white",
+      config: { y: -10, rotate: -6, zIndex: 6 },
     },
   ];
 
@@ -94,7 +119,7 @@ export const ThemeCards = ({
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
     const update = () =>
-      setSpacing(mq.matches ? cardSpacing : Math.round(cardSpacing * 0.39));
+      setSpacing(mq.matches ? cardSpacing : Math.round(cardSpacing * 0.45));
     update();
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
@@ -109,12 +134,14 @@ export const ThemeCards = ({
   const isCurrentActive = (card: Card) => {
     return active?.title === card.title;
   };
+  
   return (
-    <div className="relative flex h-[500px] lg:h-[600px] w-full items-center justify-center overflow-hidden py-10">
+    <div className="relative flex h-[600px] lg:h-[750px] w-full items-center justify-center overflow-hidden rounded-[24px]">
+      <PaintBackground />
       <motion.div
         ref={ref}
         onClick={() => setActive(null)}
-        className="relative mx-auto flex h-[350px] lg:h-[450px] w-full max-w-5xl items-center justify-center [--height:320px] [--width:240px] lg:[--height:400px] lg:[--width:300px]"
+        className="relative z-10 mx-auto flex h-full w-full max-w-5xl items-center justify-center [--height:340px] [--width:260px] lg:[--height:440px] lg:[--width:320px]"
       >
         {cards.map((card, index) => {
           const offsetX = (index - middle) * spacing;
@@ -127,13 +154,13 @@ export const ThemeCards = ({
                   setActive(card);
                 }}
                 animate={{
-                  y: isCurrentActive(card) ? 0 : isAnyCardActive() ? 400 : card.config.y,
-                  x: isCurrentActive(card) ? 0 : isAnyCardActive() ? offsetX * 0.4 : offsetX,
-                  rotate: isCurrentActive(card) ? 0 : isAnyCardActive() ? 0.2 * card.config.rotate : card.config.rotate,
-                  scale: isCurrentActive(card) ? activeScale : isAnyCardActive() ? 0.7 : 1,
+                  y: isCurrentActive(card) ? -40 : isAnyCardActive() ? 220 : card.config.y,
+                  x: isCurrentActive(card) ? 0 : isAnyCardActive() ? offsetX * 0.25 : offsetX,
+                  rotate: isCurrentActive(card) ? 0 : isAnyCardActive() ? 0.3 * card.config.rotate : card.config.rotate,
+                  scale: isCurrentActive(card) ? activeScale : isAnyCardActive() ? 0.75 : 1,
                 }}
                 whileHover={{
-                  scale: isCurrentActive(card) ? activeScale : isAnyCardActive() ? 0.7 : 1.05,
+                  scale: isCurrentActive(card) ? activeScale : isAnyCardActive() ? 0.8 : 1.05,
                 }}
                 transition={cardSpring}
                 style={{
@@ -144,15 +171,15 @@ export const ThemeCards = ({
                   zIndex: isCurrentActive(card) ? 50 : card.config.zIndex,
                 }}
                 className={cn(
-                  "absolute top-1/2 left-1/2 flex cursor-pointer flex-col items-start justify-start overflow-hidden rounded-2xl p-2 md:p-4 shadow-xl border-4 border-white/20",
+                  "absolute top-1/2 left-1/2 flex cursor-pointer flex-col items-start justify-start overflow-hidden rounded-2xl p-3 md:p-5 shadow-2xl border border-white/10",
                   card.className,
                 )}
               >
                 {card.skeleton}
-                <div className="mt-5 w-full">
+                <div className="mt-4 w-full">
                   <motion.h2
                     layoutId={card.title + "title"}
-                    className="font-bold text-left text-xl md:text-3xl"
+                    className="font-bold text-left text-xl md:text-3xl text-white"
                   >
                     {card.title}
                   </motion.h2>
