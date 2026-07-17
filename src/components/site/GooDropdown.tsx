@@ -141,7 +141,7 @@ export function GooDropdown({
     <div
       ref={rootRef}
       className={`relative select-none ${className ?? ""}`}
-      style={{ width, height: buttonHeight }}
+      style={{ width: buttonWidth, height: buttonHeight }}
     >
       <div className="absolute top-0 left-0" style={{ width, height: geo.layerH, zIndex: open ? 50 : 10 }}>
         <svg className="absolute h-0 w-0" aria-hidden>
