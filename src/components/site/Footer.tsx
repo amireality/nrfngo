@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
+import { GooDropdown } from "./GooDropdown";
 
 const COLS: { title: string; links: { label: string; to?: string; href?: string }[] }[] = [
   {
@@ -31,6 +32,8 @@ const COLS: { title: string; links: { label: string; to?: string; href?: string 
 ];
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-[#3a4b1f] text-white px-6 md:px-[110px] py-[96px]">
       <div className="flex flex-col lg:flex-row justify-between gap-[64px]">
@@ -39,25 +42,24 @@ export default function Footer() {
           <span className="font-script text-[24px] text-brand-light -mt-1 self-end">Foundation</span>
         </Link>
 
-        <div className="flex flex-wrap gap-[64px]">
+        <div className="flex flex-wrap gap-[64px] z-10">
           {COLS.map((col) => (
             <div key={col.title}>
-              <p className="font-bold text-[16px] mb-[16px]">{col.title}</p>
-              <ul className="space-y-[12px]">
-                {col.links.map((l) => (
-                  <li key={l.label} className="opacity-80 text-[14px]">
-                    {l.to ? (
-                      <Link to={l.to} className="hover:opacity-100">
-                        {l.label}
-                      </Link>
-                    ) : (
-                      <a href={l.href} className="hover:opacity-100">
-                        {l.label}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <GooDropdown
+                trigger={col.title}
+                items={col.links.map((l) => ({
+                  label: l.label,
+                  onClick: () => {
+                    if (l.to) navigate({ to: l.to });
+                    else if (l.href) window.open(l.href, "_blank");
+                  },
+                }))}
+                width={140}
+                buttonWidth={90}
+                align="start"
+                fill="#4f662a" // lighter olive green for the button/panel
+                textColor="#ffffff"
+              />
             </div>
           ))}
         </div>
