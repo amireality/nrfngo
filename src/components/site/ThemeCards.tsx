@@ -11,11 +11,10 @@ import projectSmileAsset from "@/assets/project_smile_1784287111245.png";
 import projectExcursionAsset from "@/assets/project_excursion_1784287121692.png";
 
 const PaintBackground = () => (
-  <div className="absolute inset-0 z-0 overflow-hidden bg-[#e8ece1]">
-    <div className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#8f9f6e] mix-blend-multiply blur-[80px] md:blur-[120px] opacity-80 animate-blob" />
-    <div className="absolute top-[20%] -right-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#556b2f] mix-blend-multiply blur-[80px] md:blur-[120px] opacity-80 animate-blob animation-delay-2000" />
-    <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-[100%] bg-[#3a4b1f] mix-blend-multiply blur-[80px] md:blur-[120px] opacity-80 animate-blob animation-delay-4000" />
-    <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px]" />
+  <div className="absolute inset-0 z-0 overflow-hidden bg-[#182613]">
+    <div className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#4f772d] mix-blend-screen blur-[60px] md:blur-[90px] opacity-70 animate-blob" />
+    <div className="absolute top-[20%] -right-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#90a955] mix-blend-screen blur-[60px] md:blur-[90px] opacity-70 animate-blob animation-delay-2000" />
+    <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-[100%] bg-[#31572c] mix-blend-screen blur-[60px] md:blur-[90px] opacity-70 animate-blob animation-delay-4000" />
   </div>
 );
 
@@ -63,35 +62,35 @@ export const ThemeCards = ({
       title: "Education",
       description: "Tuition, materials and personalized learning plans for every child.",
       skeleton: <img src={themeEducationAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-[#8f9f6e] text-white",
+      className: "bg-orange-500 text-white",
       config: { y: -20, rotate: -12, zIndex: 2 },
     },
     {
       title: "Healthcare",
       description: "Therapy, regular check-ups, and coverage for critical treatments.",
       skeleton: <img src={themeHealthcareAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-[#556b2f] text-white",
+      className: "bg-blue-500 text-white",
       config: { y: 20, rotate: -4, zIndex: 3 },
     },
     {
       title: "Community",
       description: "Building strong support networks for families walking this journey together.",
       skeleton: <img src={themeCommunityAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-[#3a4b1f] text-white",
+      className: "bg-purple-500 text-white",
       config: { y: -30, rotate: 6, zIndex: 4 },
     },
     {
       title: "Empowerment",
       description: "Providing resources and skills for sustainable livelihoods.",
       skeleton: <img src={projectSmileAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-[#a3946a] text-white",
+      className: "bg-pink-500 text-white",
       config: { y: 15, rotate: 14, zIndex: 5 },
     },
     {
       title: "Environment",
       description: "Fostering awareness and care for our natural surroundings.",
       skeleton: <img src={projectExcursionAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-[#2c3d1b] text-white",
+      className: "bg-teal-500 text-white",
       config: { y: -10, rotate: -6, zIndex: 6 },
     },
   ];
@@ -185,16 +184,21 @@ export const ThemeCards = ({
                   </motion.h2>
                   <AnimatePresence mode="popLayout">
                     {active?.title === card.title && (
-                      <motion.p
+                      <motion.div
                         layoutId={card.title + "description"}
                         initial={{ opacity: 0, x: 20, y: 20, height: 0 }}
-                        animate={{ opacity: 1, x: 0, y: 0, height: 100 }}
-                        exit={{ opacity: 0, x: 40, y: 40 }}
+                        animate={{ opacity: 1, x: 0, y: 0, height: 130 }}
+                        exit={{ opacity: 0, x: 40, y: 40, height: 0 }}
                         transition={cardSpring}
-                        className="mt-3 text-left text-sm text-white/90 md:text-base leading-relaxed"
+                        className="mt-3 flex flex-col items-start gap-4"
                       >
-                        {card.description}
-                      </motion.p>
+                        <p className="text-left text-sm text-white/90 md:text-base leading-relaxed">
+                          {card.description}
+                        </p>
+                        <button className="px-5 py-2 mt-auto rounded-full bg-white text-black text-sm font-semibold hover:bg-white/90 transition-colors shadow-sm">
+                          Explore Theme
+                        </button>
+                      </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
