@@ -42,7 +42,7 @@ export default function Footer() {
           <span className="font-script text-[24px] text-brand-light -mt-1 self-end">Foundation</span>
         </Link>
 
-        <div className="flex flex-wrap gap-[64px] z-10">
+        <div className="flex flex-row flex-wrap gap-4 md:gap-[32px] z-10">
           {COLS.map((col) => (
             <div key={col.title}>
               <GooDropdown
@@ -57,8 +57,10 @@ export default function Footer() {
                 width={140}
                 buttonWidth={90}
                 align="start"
-                fill="#4f662a" // lighter olive green for the button/panel
+                fill="#4f662a"
                 textColor="#ffffff"
+                gooStrength={14}
+                spring={{ type: "spring", bounce: 0.7, visualDuration: 0.6 }}
               />
             </div>
           ))}
