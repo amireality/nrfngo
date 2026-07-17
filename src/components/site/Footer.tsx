@@ -91,9 +91,15 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="mt-[64px] text-[13px] opacity-60">
-        © {new Date().getFullYear()} Northrop Research Foundation. All rights reserved.
-      </p>
+      <div className="mt-[64px] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <p className="text-[13px] opacity-60">
+          © {new Date().getFullYear()} Northrop Research Foundation. All rights reserved.
+        </p>
+        <div className="flex items-center gap-[6px]">
+          <span className="text-[13px] opacity-60">Developed by Setupr</span>
+          <img src="/setupr-logo.png" alt="Setupr Logo" className="h-[18px] w-auto opacity-90" />
+        </div>
+      </div>
     </footer>
   );
 }
