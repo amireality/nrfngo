@@ -42,9 +42,9 @@ export default function Footer() {
           <span className="font-script text-[24px] text-brand-light -mt-1 self-end">Foundation</span>
         </Link>
 
-        <div className="flex flex-row flex-nowrap gap-4 md:gap-[32px] z-10 overflow-visible">
+        <div className="flex flex-row flex-nowrap items-start gap-4 md:gap-[32px] z-10 overflow-visible">
           {COLS.map((col) => (
-            <div key={col.title}>
+            <div key={col.title} className="shrink-0">
               <GooDropdown
                 trigger={col.title}
                 items={col.links.map((l) => ({
