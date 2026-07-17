@@ -11,10 +11,11 @@ import projectSmileAsset from "@/assets/project_smile_1784287111245.png";
 import projectExcursionAsset from "@/assets/project_excursion_1784287121692.png";
 
 const PaintBackground = () => (
-  <div className="absolute inset-0 z-0 overflow-hidden bg-[#182613]">
-    <div className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#4f772d] mix-blend-screen blur-[60px] md:blur-[90px] opacity-70 animate-blob" />
-    <div className="absolute top-[20%] -right-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#90a955] mix-blend-screen blur-[60px] md:blur-[90px] opacity-70 animate-blob animation-delay-2000" />
-    <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-[100%] bg-[#31572c] mix-blend-screen blur-[60px] md:blur-[90px] opacity-70 animate-blob animation-delay-4000" />
+  <div className="absolute inset-0 z-0 overflow-hidden bg-[#0a1208]">
+    <div className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#1b3614] blur-[60px] md:blur-[90px] opacity-90 animate-blob" />
+    <div className="absolute top-[20%] -right-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#254a1a] blur-[60px] md:blur-[90px] opacity-90 animate-blob animation-delay-2000" />
+    <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-[100%] bg-[#11240c] blur-[60px] md:blur-[90px] opacity-90 animate-blob animation-delay-4000" />
+    <div className="absolute inset-0 bg-[#0a1208]/30" />
   </div>
 );
 
