@@ -95,10 +95,15 @@ export default function Footer() {
         <p className="text-[13px] opacity-60">
           © {new Date().getFullYear()} Northrop Research Foundation. All rights reserved.
         </p>
-        <div className="flex items-center gap-[6px]">
+        <a 
+          href="https://setupr.com/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-[6px] hover:opacity-80 transition-opacity cursor-pointer"
+        >
           <span className="text-[13px] opacity-60">Developed by Setupr</span>
-          <img src="/setupr-logo.png" alt="Setupr Logo" className="h-[18px] w-auto opacity-90" />
-        </div>
+          <img src="/setupr-logo.png" alt="Setupr Logo" className="h-[14px] w-auto opacity-90" />
+        </a>
       </div>
     </footer>
   );
