@@ -8,6 +8,7 @@ import CTASection from "../components/site/CTASection";
 import VolunteerPopup from "../components/site/VolunteerPopup";
 import SectionEyebrow from "../components/site/SectionEyebrow";
 import { ThemeCards } from "../components/site/ThemeCards";
+import { AuroraBackground } from "../components/site/AuroraBackground";
 
 import heroAsset from "@/assets/hero.gif.asset.json";
 import heroVideoAsset from "@/assets/hero.mp4.asset.json";
@@ -118,12 +119,15 @@ function Home() {
       </section>
 
       {/* Theme Cards */}
-      <section className="px-6 md:px-[110px] py-[60px] w-full bg-brand-tint/30">
-        <SectionEyebrow>Explore our core areas</SectionEyebrow>
-        <h2 className="font-bold text-[36px] md:text-[48px] leading-[1.15] mb-8 text-center md:text-left">
-          Our Themes
-        </h2>
-        <ThemeCards />
+      <section className="relative px-6 md:px-[110px] py-[80px] w-full bg-black overflow-hidden">
+        <AuroraBackground />
+        <div className="relative z-10">
+          <SectionEyebrow className="text-white/80">Explore our core areas</SectionEyebrow>
+          <h2 className="font-bold text-[36px] md:text-[48px] leading-[1.15] mb-8 text-center md:text-left text-white">
+            Our Themes
+          </h2>
+          <ThemeCards />
+        </div>
       </section>
 
       {/* About */}

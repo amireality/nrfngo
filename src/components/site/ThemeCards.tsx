@@ -10,15 +10,6 @@ import themeCommunityAsset from "@/assets/theme_community_1784287069145.png";
 import projectSmileAsset from "@/assets/project_smile_1784287111245.png";
 import projectExcursionAsset from "@/assets/project_excursion_1784287121692.png";
 
-const PaintBackground = () => (
-  <div className="absolute inset-0 z-0 overflow-hidden bg-[#0a1208]">
-    <div className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#1b3614] blur-[60px] md:blur-[90px] opacity-90 animate-blob" />
-    <div className="absolute top-[20%] -right-[10%] w-[80%] h-[80%] rounded-[100%] bg-[#254a1a] blur-[60px] md:blur-[90px] opacity-90 animate-blob animation-delay-2000" />
-    <div className="absolute -bottom-[20%] left-[20%] w-[80%] h-[80%] rounded-[100%] bg-[#11240c] blur-[60px] md:blur-[90px] opacity-90 animate-blob animation-delay-4000" />
-    <div className="absolute inset-0 bg-[#0a1208]/30" />
-  </div>
-);
-
 type Card = {
   title: string;
   description: string;
@@ -63,35 +54,35 @@ export const ThemeCards = ({
       title: "Education",
       description: "Tuition, materials and personalized learning plans for every child.",
       skeleton: <img src={themeEducationAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-orange-500 text-white",
+      className: "bg-orange-600/30 backdrop-blur-xl border border-orange-500/40 shadow-[0_0_20px_rgba(234,88,12,0.2)] text-white",
       config: { y: -20, rotate: -12, zIndex: 2 },
     },
     {
       title: "Healthcare",
       description: "Therapy, regular check-ups, and coverage for critical treatments.",
       skeleton: <img src={themeHealthcareAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-blue-500 text-white",
+      className: "bg-blue-600/30 backdrop-blur-xl border border-blue-500/40 shadow-[0_0_20px_rgba(37,99,235,0.2)] text-white",
       config: { y: 20, rotate: -4, zIndex: 3 },
     },
     {
       title: "Community",
       description: "Building strong support networks for families walking this journey together.",
       skeleton: <img src={themeCommunityAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-purple-500 text-white",
+      className: "bg-purple-600/30 backdrop-blur-xl border border-purple-500/40 shadow-[0_0_20px_rgba(147,51,234,0.2)] text-white",
       config: { y: -30, rotate: 6, zIndex: 4 },
     },
     {
       title: "Empowerment",
       description: "Providing resources and skills for sustainable livelihoods.",
       skeleton: <img src={projectSmileAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-pink-500 text-white",
+      className: "bg-pink-600/30 backdrop-blur-xl border border-pink-500/40 shadow-[0_0_20px_rgba(219,39,119,0.2)] text-white",
       config: { y: 15, rotate: 14, zIndex: 5 },
     },
     {
       title: "Environment",
       description: "Fostering awareness and care for our natural surroundings.",
       skeleton: <img src={projectExcursionAsset} className="h-32 md:h-40 w-full rounded-xl object-cover" />,
-      className: "bg-teal-500 text-white",
+      className: "bg-teal-600/30 backdrop-blur-xl border border-teal-500/40 shadow-[0_0_20px_rgba(13,148,136,0.2)] text-white",
       config: { y: -10, rotate: -6, zIndex: 6 },
     },
   ];
@@ -137,7 +128,6 @@ export const ThemeCards = ({
   
   return (
     <div className="relative flex h-[600px] lg:h-[750px] w-full items-center justify-center overflow-hidden rounded-[24px]">
-      <PaintBackground />
       <motion.div
         ref={ref}
         onClick={() => setActive(null)}
