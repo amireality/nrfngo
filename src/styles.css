@@ -69,11 +69,11 @@
   --hairline: oklch(0.9 0 0);            /* #e5e5e5 */
 
   /* Green primary — replaces the yellow #F2C94C palette */
-  --brand: oklch(0.72 0.19 148);         /* #34c759 sf green */
+  --brand: #556b2f;         /* dark olive green */
   --brand-foreground: oklch(0.13 0.01 40);
-  --brand-light: oklch(0.91 0.08 148);   /* #bef3c0 pale green */
-  --brand-dark: oklch(0.55 0.17 148);    /* deeper green for hover */
-  --brand-tint: oklch(0.97 0.04 148);    /* very light green section bg */
+  --brand-light: #8f9f6e;   /* lighter olive */
+  --brand-dark: #3a4b1f;    /* deeper green for hover */
+  --brand-tint: #e8ece1;    /* very light olive tint */
 
   /* shadcn defaults, tuned to the brand */
   --card: var(--background);

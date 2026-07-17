@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import ctaImage from "@/assets/project_smile_1784287111245.png";
 
 export default function CTASection({ onVolunteerClick }: { onVolunteerClick?: () => void }) {
   return (
@@ -7,7 +8,7 @@ export default function CTASection({ onVolunteerClick }: { onVolunteerClick?: ()
         <img
           alt=""
           className="absolute inset-0 object-cover size-full"
-          src="https://images.unsplash.com/photo-1497375638960-ca368c7231e4?auto=format&fit=crop&w=1600&q=80"
+          src={ctaImage}
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-[805px]">

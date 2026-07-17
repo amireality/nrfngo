@@ -10,18 +10,25 @@ import SectionEyebrow from "../components/site/SectionEyebrow";
 
 import heroAsset from "@/assets/hero.gif.asset.json";
 import heroVideoAsset from "@/assets/hero.mp4.asset.json";
+import imgAboutAsset from "@/assets/about_children_1784287089618.png";
+import imgServicesAsset from "@/assets/services_therapy_1784287099950.png";
+import imgProject1Asset from "@/assets/project_smile_1784287111245.png";
+import imgProject2Asset from "@/assets/project_excursion_1784287121692.png";
+import imgProject3Asset from "@/assets/project_awareness_1784287132114.png";
+import themeEducationAsset from "@/assets/theme_education_1784287021947.png";
+import themeHealthcareAsset from "@/assets/theme_healthcare_1784287032350.png";
+import themeCommunityAsset from "@/assets/theme_community_1784287069145.png";
+
 const IMG_HERO = heroAsset.url;
 const VIDEO_HERO = heroVideoAsset.url;
-const IMG_ABOUT =
-  "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80";
-const IMG_SERVICES =
-  "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=80";
-const IMG_PROJECT_1 =
-  "https://images.unsplash.com/photo-1497375638960-ca368c7231e4?auto=format&fit=crop&w=1200&q=80";
-const IMG_PROJECT_2 =
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80";
-const IMG_PROJECT_3 =
-  "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80";
+const IMG_ABOUT = imgAboutAsset;
+const IMG_SERVICES = imgServicesAsset;
+const IMG_PROJECT_1 = imgProject1Asset;
+const IMG_PROJECT_2 = imgProject2Asset;
+const IMG_PROJECT_3 = imgProject3Asset;
+const THEME_EDUCATION = themeEducationAsset;
+const THEME_HEALTHCARE = themeHealthcareAsset;
+const THEME_COMMUNITY = themeCommunityAsset;
 
 const SERVICES = [
   { Icon: HeartHandshake, title: "Family support", desc: "Counselling, respite and long-term guidance for every parent walking this journey." },
@@ -106,6 +113,42 @@ function Home() {
               What we do
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Theme Cards */}
+      <section className="px-6 md:px-[110px] py-[60px] w-full">
+        <SectionEyebrow>Explore our core areas</SectionEyebrow>
+        <h2 className="font-bold text-[36px] md:text-[48px] leading-[1.15] mb-8 text-center md:text-left">
+          Our Themes
+        </h2>
+        <div className="flex gap-6 overflow-x-auto snap-x scroll-pl-8 -mx-6 px-6 py-2 md:grid md:grid-cols-3 md:overflow-x-visible md:mx-0 md:px-0 md:py-0 pb-6 scrollbar-hide">
+          <Link to="#" className="w-[280px] shrink-0 snap-start md:w-auto group">
+            <div className="relative w-full aspect-[4/3]">
+              <div className="absolute inset-0 overflow-hidden bg-white dark:bg-stone-900 outline outline-1 outline-black/5 dark:outline-white/10 shadow-sm group-hover:shadow-md transition-shadow duration-200 rounded-[16px]">
+                <img src={THEME_EDUCATION} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Education Theme" />
+              </div>
+            </div>
+            <p className="mt-4 text-center text-[18px] font-medium leading-[20px] text-ink">Education</p>
+          </Link>
+          
+          <Link to="#" className="w-[280px] shrink-0 snap-start md:w-auto group">
+            <div className="relative w-full aspect-[4/3]">
+              <div className="absolute inset-0 overflow-hidden bg-white dark:bg-stone-900 outline outline-1 outline-black/5 dark:outline-white/10 shadow-sm group-hover:shadow-md transition-shadow duration-200 rounded-[16px]">
+                <img src={THEME_HEALTHCARE} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Healthcare Theme" />
+              </div>
+            </div>
+            <p className="mt-4 text-center text-[18px] font-medium leading-[20px] text-ink">Healthcare</p>
+          </Link>
+
+          <Link to="#" className="w-[280px] shrink-0 snap-start md:w-auto group">
+            <div className="relative w-full aspect-[4/3]">
+              <div className="absolute inset-0 overflow-hidden bg-white dark:bg-stone-900 outline outline-1 outline-black/5 dark:outline-white/10 shadow-sm group-hover:shadow-md transition-shadow duration-200 rounded-[16px]">
+                <img src={THEME_COMMUNITY} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Community Theme" />
+              </div>
+            </div>
+            <p className="mt-4 text-center text-[18px] font-medium leading-[20px] text-ink">Community</p>
+          </Link>
         </div>
       </section>
 
