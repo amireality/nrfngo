@@ -190,7 +190,7 @@ export function GooDropdown({
         {/* goo blob layer: trigger pill + morphing panel */}
         <div
           className="pointer-events-none absolute inset-0"
-          style={{ filter: \`url(#\${filterId})\` }}
+          style={{ filter: `url(#${filterId})` }}
         >
           <div
             className="absolute top-0"
