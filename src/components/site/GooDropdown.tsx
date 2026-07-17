@@ -48,35 +48,6 @@ const DEFAULT_SPRING: SpringConfig = {
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
-function roundedRectShape(
-  x: number,
-  y: number,
-  w: number,
-  h: number,
-  radius: number,
-) {
-  const r = Math.max(0, Math.min(radius, w / 2, h / 2));
-  const k = r * 0.5523; // circle-arc bezier constant
-  const x1 = x;
-  const y1 = y;
-  const x2 = x + w;
-  const y2 = y + h;
-  const p = (n: number) => `${n.toFixed(3)}px`;
-
-  return (
-    `shape(from ${p(x1 + r)} ${p(y1)}, ` +
-    `line to ${p(x2 - r)} ${p(y1)}, ` +
-    `curve to ${p(x2)} ${p(y1 + r)} with ${p(x2 - r + k)} ${p(y1)} / ${p(x2)} ${p(y1 + r - k)}, ` +
-    `line to ${p(x2)} ${p(y2 - r)}, ` +
-    `curve to ${p(x2 - r)} ${p(y2)} with ${p(x2)} ${p(y2 - r + k)} / ${p(x2 - r + k)} ${p(y2)}, ` +
-    `line to ${p(x1 + r)} ${p(y2)}, ` +
-    `curve to ${p(x1)} ${p(y2 - r)} with ${p(x1 + r - k)} ${p(y2)} / ${p(x1)} ${p(y2 - r + k)}, ` +
-    `line to ${p(x1)} ${p(y1 + r)}, ` +
-    `curve to ${p(x1 + r)} ${p(y1)} with ${p(x1)} ${p(y1 + r - k)} / ${p(x1 + r - k)} ${p(y1)}, ` +
-    `close)`
-  );
-}
-
 export function GooDropdown({
   trigger = "Share",
   items = DEFAULT_ITEMS,
@@ -112,15 +83,21 @@ export function GooDropdown({
 
   const shapeAt = useMemo(() => {
     const { closed, open } = geo;
-    return (t: number) =>
-      roundedRectShape(
-        lerp(closed.x, open.x, t),
-        lerp(closed.y, open.y, t),
-        lerp(closed.w, open.w, t),
-        lerp(closed.h, open.h, t),
-        lerp(closed.r, open.r, t),
-      );
-  }, [geo]);
+    return (t: number) => {
+      const x = lerp(closed.x, open.x, t);
+      const y = lerp(closed.y, open.y, t);
+      const w = lerp(closed.w, open.w, t);
+      const h = lerp(closed.h, open.h, t);
+      const r = lerp(closed.r, open.r, t);
+      
+      const top = y;
+      const right = width - (x + w);
+      const bottom = geo.layerH - (y + h);
+      const left = x;
+      
+      return `inset(${top}px ${right}px ${bottom}px ${left}px round ${r}px)`;
+    };
+  }, [geo, width]);
 
   const closedShape = shapeAt(0);
 
@@ -164,9 +141,8 @@ export function GooDropdown({
     <div
       ref={rootRef}
       className={`relative select-none ${className ?? ""}`}
-      style={{ width, height: buttonHeight }} // Keeps layout collapsed when closed
+      style={{ width, height: buttonHeight }}
     >
-      {/* Container to allow overflowing goo layer */}
       <div className="absolute top-0 left-0" style={{ width, height: geo.layerH, zIndex: open ? 50 : 10 }}>
         <svg className="absolute h-0 w-0" aria-hidden>
           <defs>
@@ -187,7 +163,6 @@ export function GooDropdown({
           </defs>
         </svg>
 
-        {/* goo blob layer: trigger pill + morphing panel */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{ filter: `url(#${filterId})` }}
@@ -209,7 +184,6 @@ export function GooDropdown({
           />
         </div>
 
-        {/* crisp content layer */}
         <div className="absolute inset-0">
           <button
             type="button"
@@ -227,7 +201,6 @@ export function GooDropdown({
             {trigger}
           </button>
 
-          {/* items are always rendered; the clip-path reveals them */}
           <div
             ref={contentRef}
             role="menu"
